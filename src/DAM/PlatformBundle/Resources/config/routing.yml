@@ -1,0 +1,36 @@
+dam_platform_home:
+    path:      /{page}
+    defaults:  
+        _controller: DAMPlatformBundle:Advert:index
+        page: 1
+    requirements:
+        page: \d*
+
+dam_platform_view:
+    path:      /advert/{id}
+    defaults:  { _controller: DAMPlatformBundle:Advert:view }
+
+dam_platform_view_slug:
+    path:      /{year}/{slug}.{format}
+    defaults:  
+        _controller: DAMPlatformBundle:Advert:viewSlug
+        format:      html
+    requirements:
+        year:   \d{4}
+        format: html|xml
+
+dam_platform_add:
+    path:      /add
+    defaults:  { _controller: DAMlatformBundle:Advert:add }
+
+dam_platform_edit:
+    path:      /edit/{id}
+    defaults:  { _controller: DAMlatformBundle:Advert:edit }
+    requirements:
+        id: \d+
+
+dam_platform_delete:
+    path:      /delete/{id}
+    defaults:  { _controller: DAMlatformBundle:Advert:delete }
+    requirements:
+        id: \d+

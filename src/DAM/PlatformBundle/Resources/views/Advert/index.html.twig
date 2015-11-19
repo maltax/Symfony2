@@ -1,0 +1,18 @@
+{# src/OC/PlatformBundle/Resources/views/Advert/index.html.twig #}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Advert</title>
+    </head>
+    <body>
+        <h1>Page d'annonce numéro {{page}}</h1>
+        <a href="{{url}}">Annonce numéro 666</a>
+        {% for advert_id in 0..10 %}
+        	<br/>
+	        <a href="{{ path('dam_platform_view', { 'id': advert_id }) }}">
+			    Lien vers l'annonce d'id {{ advert_id }}
+			</a>
+		{% endfor %}
+    </body>
+</html>

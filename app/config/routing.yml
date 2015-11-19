@@ -1,0 +1,3 @@
+dam_platform:
+    resource: "@DAMPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
